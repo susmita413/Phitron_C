@@ -1,3 +1,6 @@
+// link B,C,D,E,F,Q - https://codeforces.com/group/MWSDmqGsZm/contest/219432
+
+
 #include<stdio.h>
 
 int main(){
