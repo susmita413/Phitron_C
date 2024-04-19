@@ -1,3 +1,6 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/A
+//
+
 #include<stdio.h>
 
 int main(){
