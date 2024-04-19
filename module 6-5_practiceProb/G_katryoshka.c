@@ -12,25 +12,23 @@ int main(){
     
     long long int n,m,k;
     scanf("%lld %lld %lld",&n,&m,&k);
-    int count;
-    while(1){
-        if(n !=0 || m !=0 || k !=0){
-            count++ ;
-            n-- ;
-            m-- ;
-            k-- ;
-        }
-        if(n==0 || m==0 || k==0) break ;
+    int count=0 ;
+    
+    if(n<=m && n<=k){
+        count = n ; n=0 ;  m= m-n ;  k = k-n ;
+    }
+    else if(m<n && m<k){
+        count = m ; m=0 ;  n= n-m ;  k = k-m ;
+    }
+    else {
+        count = k; k=0;  m=m-k ; n=n-k ;
     }
 
     if(m==0){
         if(k*2 <=n) count = count+k;
         else if(k*2 >n){
-            while(n !=1){
-                count++ ;
-                n= n-2 ;
-                k-- ;
-            }
+            int half = n/2 ;
+            count =count + half ;
         }
     }
 
